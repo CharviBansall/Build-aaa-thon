@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-title {
+  font-size: clamp(5rem, 15vw, 12rem);
+  font-weight: 900;
+  background: linear-gradient(135deg, #667eea, #764ba2, #f093fb, #f5576c);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.circular-text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* Mission section styles - now includes rotating text */
+.mission-section {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  color: #374151;
+}
+
+.squares-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.mission-wrapper {
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.mission-title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #111827, #1f2937, #374151);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.02em;
+}
+
+.mission-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+.mission-text {
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+  line-height: 1.7;
+  color: #1f2937;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 600;
+}
+
+/* Scroll Velocity section */
+.scroll-velocity-section {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  margin-top: 3rem;
+  position: relative;
+  z-index: 3;
+}
+
+.custom-scroll-text {
+  color: #1f2937;
+  font-weight: 800;
+}
+
+.scroll-velocity-section .parallax {
+  margin: 1rem 0;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.scroll-velocity-section .scroller {
+  color: #1f2937;
+  font-weight: 800;
+  width: max-content;
+  min-width: 200vw;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .mission-section {
+    padding: 2rem 1rem;
+  }
+  
+  .scroll-velocity-section .scroller {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+} 
