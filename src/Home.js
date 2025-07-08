@@ -1,13 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CircularText from './CircularText';
 import ScrollVelocity from './ScrollVelocity';
 import Squares from './Squares';
 import './App.css';
 
-function App() {
+function Home() {
   return (
-    <div className="App">
-      <div className="container">
+    <div className="home-page">
+      <div className="container" id="home">
+        <div className="page-navigation">
+          <a href="#home" className="page-link">Home</a>
+          <a href="#mission" className="page-link">Mission</a>
+          <a href="#events" className="page-link">Events</a>
+          <Link to="/projects" className="page-link">Projects</Link>
+        </div>
+        
         <h1 className="main-title">Buildathon</h1>
         <div className="circular-text-overlay">
           <CircularText
@@ -19,7 +27,7 @@ function App() {
         </div>
       </div>
       
-      <div className="mission-section">
+      <div className="mission-section" id="mission">
         <Squares 
           speed={0.5} 
           squareSize={40}
@@ -48,7 +56,7 @@ function App() {
         </div>
       </div>
 
-      <div className="events-section">
+      <div className="events-section" id="events">
         <div className="events-background">
           <CircularText 
             text=" BUILD • CONNECT • CREATE • INNOVATE • COLLABORATE • INSPIRE • "
@@ -79,18 +87,23 @@ function App() {
             <div className="luma-events-section">
               <h3 className="luma-title">Upcoming Events</h3>
               <div className="luma-embed-placeholder">
-                {/* Luma embed will go here */}
-                <p className="luma-placeholder-text">Luma calendar integration coming soon...</p>
+                <p className="luma-placeholder-text">
+                  Join our Build-aaa-thon - a marathon for builders and founders to make 0-1 products
+                </p>
                 <div className="luma-embed-container">
-                  {/* You can replace this with your actual Luma embed code */}
-                  <iframe 
-                    src="https://lu.ma/embed/calendar/cal-xyz/events"
-                    width="100%" 
-                    height="400"
-                    frameBorder="0"
-                    style={{border: 'none', borderRadius: '12px'}}
-                    title="Luma Calendar"
-                  />
+                  <div className="join-community-section">
+                    <a 
+                      href="https://lu.ma/z5blpccb"
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="join-community-button"
+                    >
+                      Join Community
+                    </a>
+                    <p className="event-details-text">
+                      5-9 PM Build Sessions • For builders & founders • Go from 0 to 1
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -101,4 +114,4 @@ function App() {
   );
 }
 
-export default App; 
+export default Home; 

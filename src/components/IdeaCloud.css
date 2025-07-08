@@ -1,0 +1,141 @@
+.idea-cloud-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Input Wrapper - For the new IdeaInput component */
+.idea-input-wrapper {
+  width: 100%;
+  max-width: 90vw;
+  margin: 0 auto 1rem auto;
+}
+
+.cloud-section {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.cloud-section h3 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.wordcloud-wrapper {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.wordcloud-wrapper p {
+  color: #ffffff;
+  font-style: italic;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.ideas-list {
+  width: 100%;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.ideas-list h4 {
+  color: #1e293b;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.ideas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.idea-item {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  color: #1e293b;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  transition: all 0.3s ease;
+}
+
+.idea-item:hover {
+  border-color: rgba(139, 92, 246, 0.6);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+  background: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .idea-cloud-container {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+  
+  .idea-input-wrapper {
+    max-width: 100%;
+  }
+  
+  .cloud-section,
+  .ideas-list {
+    padding: 1rem;
+  }
+  
+  .wordcloud-wrapper {
+    height: 300px;
+  }
+  
+  .ideas-grid {
+    grid-template-columns: 1fr;
+  }
+} 
+
+.empty-cloud-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  text-align: center;
+}
+
+.empty-cloud-message p {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin: 0;
+  padding: 2rem;
+  background: rgba(139, 92, 246, 0.2);
+  border-radius: 12px;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  backdrop-filter: blur(10px);
+  max-width: 400px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+} 

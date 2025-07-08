@@ -1,0 +1,52 @@
+.form {
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  background: transparent;
+  color: #1e293b;
+  font-size: 1rem;
+  border-radius: 12px 0 0 12px;
+  outline: none;
+}
+
+.input::placeholder {
+  color: #94a3b8;
+}
+
+.button {
+  padding: 0 1.25rem;
+  background: linear-gradient(135deg, #6366F1, #EF4444);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 0 12px 12px 0;
+  outline: none;
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #4F46E5, #DC2626);
+  transform: scale(1.02);
+}
+
+/* Remove all browser focus outlines on click/focus */
+.input:focus,
+.button:focus,
+.form:focus {
+  outline: none !important;
+  box-shadow: none !important;
+} 
