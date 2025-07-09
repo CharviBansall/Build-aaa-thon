@@ -1,7 +1,7 @@
-*node_modules
+node_modules
 .env
-*build
-*dist
+build
+dist
 *.log
 .DS_Store
 .vercel
